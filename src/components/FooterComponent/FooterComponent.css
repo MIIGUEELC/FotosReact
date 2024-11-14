@@ -1,0 +1,15 @@
+.FooterContainer {
+    background-image: url("../../assets/montaña.png");
+    background-size: cover;
+    
+    
+}
+
+.FooterComponent__text {
+    color: #556197;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    opacity: 0.8;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.7em;
+}

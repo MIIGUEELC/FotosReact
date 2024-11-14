@@ -1,0 +1,100 @@
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 2rem;
+    height: fit-content;
+    
+}
+
+.ImagesContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; 
+    overflow: hidden;
+}
+
+.ImagesContainer__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.ImagesContainer__img:hover {
+    transform: scale(1.05);
+}
+
+.ImagesContainer__data {
+position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+
+.data__text {
+   padding-bottom: 0.5rem;
+   text-align: center;
+   font-size: 1.1em;
+   font-family: "Roboto", sans-serif;
+   
+}
+
+.ImagesContainer:hover .ImagesContainer__data {
+    opacity: 1;
+}
+
+.InputComponent {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.InputComponent__content {
+    margin-bottom: 2rem;
+    width: 50%;
+    padding: 0.3rem;
+    color: black;
+    font-size: 1.8em;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.InputComponent__content__icon {
+    transform: translate(-138%, 5%);
+    font-family: "Caveat", cursive;
+    color: #A1C0AA;
+    cursor: pointer;
+    font-size: 1.8em;
+    font-weight: 700;
+    
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .image-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+}
