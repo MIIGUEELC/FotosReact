@@ -4,7 +4,7 @@
     align-items: center;
     font-size: 3rem;
     padding: 30rem;
-    font-family: "Caveat", cursive;
-    text-shadow: 2px 2px 0px #E8C6B4, -1px 1px 0px #E8C6B4, 1px -1px 0px #E8C6B4, -1px -1px 0px #E8C6B4;
-    color: #FFFFFF;
+    font-family: "Caveat";
+    
+    color: #1a1717;
 }

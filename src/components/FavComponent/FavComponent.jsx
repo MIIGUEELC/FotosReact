@@ -13,7 +13,7 @@ export const FavoritesComponent = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   if (favorites.length === 0) {
-    return <p className='WarningFav'>No favorites added yet... Go Home to add new photos!</p>;
+    return <p className='WarningFav'>Aun no tienes favoritos ...añade algunos!</p>;
   }
 
  
