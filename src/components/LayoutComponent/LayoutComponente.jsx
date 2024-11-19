@@ -1,30 +1,35 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+// src/components/LayoutComponent/LayoutComponent.jsx
+import React, { useRef, useState, useEffect } from "react";
+import { Outlet, NavLink, useLocation, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { GetSearchPhotoThunk } from "../../feature/photos/PhotoThunk";
 import montaña from "/src/assets/montaña.png";
 import picsworld from "/src/assets/picsworld.png";
-import "./HeaderComponent.css";
 
-export const HeaderComponent = () => {
-  const dispatch = useDispatch();
+
+import "./LayoutComponent.css";
+
+export const LayoutComponent = () => {
+    const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Maneja la búsqueda al presionar Enter
-  const handleSearch = (event) => {
-    if (event.key === "Enter" && searchTerm.trim() !== "") {
-      dispatch(updateSearchTerm(searchTerm)); // Actualiza el término global
-      dispatch(GetSearchPhotoThunk(searchTerm)); // Realiza la búsqueda de fotos en la API
-    }
-  };
-
-  // Alterna el menú hamburguesa
+  // Alterna el menú de navegación
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  
+
+  const handleSearch = (event) => {
+    if (event.key === "Enter" && searchTerm.trim() !== "") {
+      dispatch(GetSearchPhotoThunk(searchTerm));
+    }
+  };
+
   return (
+    <>
     <header className="HeaderContainer" style={{ backgroundImage: `url(${montaña})` }}>
       <div className="HeaderContainerimg">
         <img src={picsworld} alt="Logo" className="HeaderContainer__imagen1" />
@@ -62,7 +67,16 @@ export const HeaderComponent = () => {
         />
       </div>
     </header>
+    <main className="main">
+                <Outlet />
+      </main>
+    <footer className='FooterContainer'>
+        <img></img>
+        <h2 className='FooterComponent__text'>PICS WORLD @Copyright</h2>
+        
+    </footer>
+
+      
+    </>
   );
 };
-
-

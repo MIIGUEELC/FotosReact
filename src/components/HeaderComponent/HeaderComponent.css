@@ -35,17 +35,18 @@
   }
   
   .HeaderContainer__Menu--item {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #070303;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px 15px;
     border-radius: 20px;
     text-decoration: none;
     transition: background 0.3s;
+    font-family: monospace;
   }
   
   .HeaderContainer__Menu--item:hover {
-    background-color: rgba(161, 38, 38, 0.4);
+    background-color: rgba(104, 87, 87, 0.4);
   }
   
   .HeaderContainer__search {
@@ -77,8 +78,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 25vw; /* Ocupa un cuarto de la pantalla */
-    height: 100vh; /* Cubre toda la altura de la pantalla */
+    width: 25vw; 
+    height: 100vh;
     background-color: #f8f9fa; /* Color de fondo suave */
     border-left: 1px solid #ddd;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra a la izquierda */
@@ -86,8 +87,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transform: translateX(100%); /* Oculto inicialmente fuera de la pantalla */
-    transition: transform 0.3s ease; /* Animación de deslizamiento */
+    transform: translateX(100%);
+    transition: transform 0.3s ease; 
     z-index: 10;
   }
   
@@ -100,22 +101,22 @@
   }
   
   .HeaderContainer__DropdownMenu--item:hover {
-    color: #007bff; /* Color al pasar el cursor */
+    color: #007bff; 
   }
   
-  /* Cuando el menú está abierto, sobresale */
+ 
   .HeaderContainer__DropdownMenu.open {
-    transform: translateX(0%); /* Se desliza desde la derecha */
+    transform: translateX(0%); 
   }
   
   /* Estilos específicos para móvil */
   @media (max-width: 768px) {
-    /* Ocultar el menú de navegación normal en móvil */
+   
     .HeaderContainer__Menu {
       display: none;
     }
   
-    /* Mostrar el icono de menú hamburguesa en móvil */
+    
     .hamburger-icon {
       display: block;
     }

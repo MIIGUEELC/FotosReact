@@ -92,9 +92,39 @@ position: absolute;
     
 }
 
-@media only screen and (max-width: 600px) {
+.container-sort {
+    display: flex;
+    justify-content: center; /* Centrar el select horizontalmente */
+    align-items: center;    /* Centrar el select verticalmente */
+    margin: 20px 0;         /* Espaciado vertical */
+  }
+  
+  .container-sort select {
+    font-size: 16px;        /* Tamaño de fuente claro y legible */
+    padding: 10px 15px;     /* Espaciado interno para una apariencia limpia */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 8px;     /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333;           /* Color del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: all 0.3s ease; /* Transición suave para hover */
+  }
+  
+  .container-sort select:hover {
+    background-color: #f0f0f0; /* Fondo ligeramente más oscuro al pasar el ratón */
+    border-color: #aaa;        /* Resaltar borde */
+  }
+  
+  .container-sort select:focus {
+    outline: none;            /* Eliminar el borde azul predeterminado */
+    border-color: #007bff;    /* Borde azul al enfocarse */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul */
+  }
+
+@media only screen and (max-width: 700px) {
     .image-list {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 10px;
     }
+   
 }

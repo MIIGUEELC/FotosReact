@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
 
-import { FooterComponent } from "../components/FooterComponent/FooterComponent";
-import { HeaderComponent } from "../components/HeaderComponent/HeaderComponent";
-import { GetImagesThunk } from "../feature/photos/PhotoThunk";
+
+// import { FooterComponent } from "../components/FooterComponent/FooterComponent";
+// import { HeaderComponent } from "../components/HeaderComponent/HeaderComponent";
+
 import { ImageComponent } from "../components/ImagesComponent/PhotosComponent";
+import { LayoutComponent } from "../components/LayoutComponent/LayoutComponente";
 import "../components/ImagesComponent/PhotosComponent.css"
 
 export const IndexPage = () => {
@@ -12,10 +13,9 @@ export const IndexPage = () => {
     return (
         <>
             
-            <HeaderComponent />
+           <LayoutComponent/>
             <ImageComponent />
-          
-            <FooterComponent />
+            
         </>
     );
 };
